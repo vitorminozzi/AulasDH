@@ -1,0 +1,52 @@
+import UIKit
+
+class ViewController: UIViewController {
+    
+    
+    var randomName = ""
+    
+    var luckNames: [String] = ["Nao comprar","Comprar"]
+    
+    func labelDesign () {
+        
+        self.mainLabel.layer.cornerRadius = 5
+        self.mainLabel.layer.borderWidth = 2
+        self.mainLabel.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    
+    func randomize() {
+        
+        randomName = luckNames.randomElement() ?? " "
+        
+        print(randomName)
+        
+    }
+    
+    
+    override func viewDidLoad() {
+        
+        self.labelDesign()
+        
+        
+       
+        
+       
+        
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    @IBOutlet weak var mainLabel: UILabel!
+    
+    @IBAction func randomChar(_ sender: Any) {
+        
+        self.randomize()
+        self.mainLabel.text = randomName
+        
+        
+        
+       
+    }
+}
