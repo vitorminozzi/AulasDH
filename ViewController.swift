@@ -9,8 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    func teste() {
+          
+          print("safe")
+          }
 
     override func viewDidLoad() {
+        
+      
+        self.teste()
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
